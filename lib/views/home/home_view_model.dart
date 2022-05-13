@@ -4,8 +4,11 @@ import 'package:flutter_application_1/core/logger.dart';
 
 class HomeViewModel extends BaseViewModel {
   Logger log;
+  bool _isExpanded = false;
+  get isExpanded => _isExpanded;
+  set isExpanded(value) => _isExpanded = value;
 
   HomeViewModel() {
-    this.log = getLogger(this.runtimeType.toString());
+    log = getLogger(runtimeType.toString());
   }
 }
