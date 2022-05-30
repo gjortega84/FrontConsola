@@ -1,9 +1,15 @@
 library home_view;
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'home_view_model.dart';
+import 'dart:convert' as convert;
+
+import 'package:http/http.dart' as http;
 
 part 'home_mobile.dart';
 part 'home_tablet.dart';
