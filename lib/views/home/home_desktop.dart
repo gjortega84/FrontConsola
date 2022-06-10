@@ -103,11 +103,8 @@ class _HomeDesktopState extends State<_HomeDesktop> {
                                 },
                                 body: Column(
                                   children: [
-                                    ListTile(
-                                      title: TextButton(
-                                          onPressed: () {},
-                                          child: const Text(
-                                              "Agregar Institucion")),
+                                    const ListTile(
+                                      title: Text("Agregar Institucion"),
                                     ),
                                     ListTile(
                                       title: TextButton(
@@ -128,15 +125,12 @@ class _HomeDesktopState extends State<_HomeDesktop> {
                             ],
                           )),
                       ListTile(
-                        title: TextButton(
-                          child: Text("Administrar Menu"),
-                          onPressed: () {
-                            // var conexionHttp = http.Client();
-                            // Uri uri = Uri.parse("http://localhost:3000/menu");
-                            // dynamic response = await conexionHttp.get(uri);
-                            print('respuesta ');
-                          },
+                        title: const Text(
+                          "Administrar Menu",
                         ),
+                        onTap: () async {
+                          await widget.viewModel.getMenus();
+                        },
                       ),
                       ListTile(
                         title: TextButton(
